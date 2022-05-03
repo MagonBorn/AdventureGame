@@ -6,7 +6,7 @@ class TreeNode:
 
     # Method to add a child node to a parents list of referenced nodes
     def add_child(self, node):
-        print("Adding Child Node")
+        self.choices.append(node) # add argument node to the invoked nodes choices list.
 
 # ---------- Tree Nodes ---------- #
 # Root TreeNode
