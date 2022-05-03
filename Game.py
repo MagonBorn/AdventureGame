@@ -15,3 +15,4 @@ Do you:
 
 # ---------- Testing Area ---------- #
 print("Once Upon A Time")
+print(story_root.story_piece)
