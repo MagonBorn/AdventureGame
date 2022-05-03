@@ -4,6 +4,10 @@ class TreeNode:
         self.story_piece = story_piece # Holds story text as string.
         self.choices = [] # List of child node references for current node.
 
+    # Method to add a child node to a parents list of referenced nodes
+    def add_child(self, node):
+        print("Adding Child Node")
+
 # ---------- Tree Nodes ---------- #
 # Root TreeNode
 story_root = TreeNode("""
