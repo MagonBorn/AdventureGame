@@ -1,10 +1,11 @@
 # ---------- Classes ---------- #
 class TreeNode:
     def __init__(self, story_piece):
-        self.story_piece = story_piece
-        self.choices = []
+        self.story_piece = story_piece # Holds story text as string.
+        self.choices = [] # List of child node references for current node.
 
 # ---------- Tree Nodes ---------- #
+# Root TreeNode
 story_root = TreeNode("""
 You are in a forest clearing. There is a path to the left.
 A bear emerges from the trees and roars!
