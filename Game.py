@@ -68,6 +68,24 @@ in the wilderness.
 YOU REMAIN LOST.
 """)
 choice_a.add_child(choice_a2) # Add choice_a2 to the choice_a TreeNodes list of choices
+
+# Choice_b B1 TreeNode
+choice_b1 = TreeNode("""
+The bear is unamused. After smelling the flowers, it turns around and leaves you alone.
+ 
+YOU REMAIN LOST.
+""")
+choice_b.add_child(choice_b1) # Add choice_b1 to the choice_b TreeNodes list of choices
+
+# Choice_b B2 TreeNode
+choice_b2 = TreeNode("""
+The bear understands and apologizes for startling you. Your new friend shows you a 
+path leading out of the forest.
+ 
+YOU HAVE ESCAPED THE WILDERNESS.
+""")
+choice_b.add_child(choice_b2) # Add choice_b2 to the choice_b TreeNodes list of choices
+
 # ---------- Testing Area ---------- #
 print("Once Upon A Time....")
 story_root.traverse()
