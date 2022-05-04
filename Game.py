@@ -51,6 +51,23 @@ Do you:
 """)
 story_root.add_child(choice_b) # Add choice_b to the story_root TreeNodes list of choices
 
+# Choice_a A1 Treenode
+choice_a1 = TreeNode("""
+The bear returns and tells you it's been a rough week. After making peace with
+a talking bear, he shows you the way out of the forest.
+ 
+YOU HAVE ESCAPED THE WILDERNESS.
+""")
+choice_a.add_child(choice_a1) # Add choice_a1 to the choice_a TreeNodes list of choices
+
+# Choice_a A2 TreeNode
+choice_a2 = TreeNode("""
+The bear returns and tells you that bullying is not okay before leaving you alone
+in the wilderness.
+ 
+YOU REMAIN LOST.
+""")
+choice_a.add_child(choice_a2) # Add choice_a2 to the choice_a TreeNodes list of choices
 # ---------- Testing Area ---------- #
 print("Once Upon A Time....")
 story_root.traverse()
