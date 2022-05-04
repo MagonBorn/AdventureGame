@@ -8,6 +8,20 @@ class TreeNode:
     def add_child(self, node):
         self.choices.append(node) # add argument node to the invoked nodes choices list.
 
+    # Method to traverse the Tree and progress the story from the root node
+    def traverse(self):
+        story_node = self # The TreeNode Object the method is invoked on, is assigned to a variable
+        print(story_node.story_piece)
+        while story_node.choices: # while the current story_node has elements in its choices list
+            choice = input("Enter 1 or 2 to continue the story: ") # Get users decision and save it to variable
+            if choice not in ["1", "2"]: # Check user input is 1 or 2
+                print("Please enter a valid option: 1 or 2")
+            else:
+                chosen_index = int(choice)-1 # parse user input to be an int and subtract one so it can be used for index selction
+                chosen_child = story_node.choices[chosen_index] # save selected tree node to a variable using parsed chosen index
+                print(chosen_child.story_piece) # print tree node story_piece
+                story_node = chosen_child # set story_node to the user selected node and continue loop until we reach a node with no elements in its choices list
+
 # ---------- Tree Nodes ---------- #
 # Root TreeNode
 story_root = TreeNode("""
@@ -39,6 +53,4 @@ story_root.add_child(choice_b) # Add choice_b to the story_root TreeNodes list o
 
 # ---------- Testing Area ---------- #
 print("Once Upon A Time....")
-print(story_root.story_piece)
-print(story_root.choices[0].story_piece)
-print(story_root.choices[1].story_piece)
+story_root.traverse()
